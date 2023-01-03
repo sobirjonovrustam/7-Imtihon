@@ -1,0 +1,61 @@
+/events:
+  get:
+    tags:
+      - event
+    responses:
+      '200':  
+        description: all events
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventResponse'
+
+
+/event?eventId:
+  get:
+    tags:
+      - event
+    parameters:
+      - name: eventId
+        in: query
+        description: event to filter by eventId
+        required: false
+    responses:
+      '200':  
+        description: all event
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventResponse'
+
+/event:
+  post:
+    tags:
+      - event
+    parameters:
+      - name: search
+        in: query
+        description: event to filter by title
+        required: false
+    responses:
+      '200':  
+        description: all event
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventResponse'  
+
+/event/admin:
+  get:
+    tags:
+      - event
+    responses:
+      '200':  
+        description: all event
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventResponse'
+    security:
+        - Bearer:
+            type: oauth2                                                            

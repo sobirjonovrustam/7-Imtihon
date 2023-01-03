@@ -1,0 +1,30 @@
+/users:
+  get:
+    tags:
+      - users
+    responses:
+      '200':  
+        description: all users
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Response'
+
+/login:
+  post:
+    tags:
+      - users    
+    requestBody:
+      description: login user
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Login'
+      required: true        
+    responses:
+      '200':  
+        description: user login
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginResponse' 

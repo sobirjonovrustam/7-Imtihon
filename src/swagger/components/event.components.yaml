@@ -1,0 +1,32 @@
+components:
+  schemas:
+    EventRespons:
+      type: object  
+      properties:
+        eventId: 
+          type: integer
+        data:
+          type: string
+        time: 
+          type: string
+        categories: 
+          type: string 
+        subCategories: 
+          type: string 
+        orderType:
+          type: string 
+        link:
+          type: string 
+        username:
+          type: string 
+        profession:
+          type: string 
+        telNumber:
+          type: string 
+        description:
+          type: string 
+        picture:
+          type: string 
+        subjectText:
+          type: string 
+        
